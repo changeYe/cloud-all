@@ -1,0 +1,20 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: hystrix-server
+  cloud:
+    consul:
+      discovery:
+        register: true
+#        enabled: true
+#        health-check-path: /actuator/health
+      host: localhost
+      port: 8500
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: 'hystrix.stream' #暴露hystrix监控端点
+server-url:
+  order-service: http://order-server

@@ -1,0 +1,15 @@
+apply plugin: 'org.springframework.boot'
+group 'com.sc.nacos'
+version '0.0.1-SNAPSHOT'
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+//    compile 'com.alibaba.boot:nacos-config-spring-boot-starter:0.2.2' :0.2.1.RELEASE
+//    compile 'org.springframework.cloud:spring-cloud-starter-alibaba-nacos-config:0.2.1.RELEASE'
+    compile( 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:2.1.2.RELEASE')
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'com.kunchi.ffc.budget:kunchi-ffc-budget-api:1.0-SNAPSHOT'
+    
+//    compile 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
+}

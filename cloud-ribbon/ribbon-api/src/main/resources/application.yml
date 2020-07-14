@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cloud-ribbon
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+#        enabled: true
+        register: true
+#    service-registry:
+#      auto-registration:
+#        enabled: false
+server:
+  port: 8764
+
+
+service-url:
+  user-service: http://user-service

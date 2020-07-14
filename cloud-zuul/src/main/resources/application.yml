@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: zuul-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+
+server:
+  port: 8091
+
+#zuul:
+#  routes: #给服务配置路由
+#    order-server:
+#      path: /order-server/**
+#      serviceId: order-server
+#    member-server:
+#      path: /order-server/**
+#      serviceId: member-server
+#  ignored-services: member-server #关闭默认路由配置
+#  prefix: /proxy # 配置网关路径前缀  访问时/proxy/order-server
+
+# 通过actuator框架，开启查看路由的端点：
+management:
+  endpoint:
+    beans:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: 'routes'

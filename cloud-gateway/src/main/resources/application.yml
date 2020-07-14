@@ -1,0 +1,25 @@
+server:
+  port: 8092
+
+service-url:
+  user-service: http://localhost:8083
+
+spring:
+  application:
+    name: cloud-gateway
+
+#  cloud:
+#    gateway:
+#      enabled=true
+#  cloud:
+#    gateway:
+#      routes:
+#      - id: path_route1 #路由的ID
+#        uri: ${service-url.user-service}/hello #匹配后路由地址,这里我路由到自己
+#        predicates: # 断言，路径相匹配的进行路由
+#        - Path=/hello
+#        filters:
+#        - AddRequestParameter=name, change
+#        - StripPrefix=1
+
+

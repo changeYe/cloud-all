@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: member-server
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+
+server:
+  port: 8081
+logging:
+  console:
+    level: debug
+
+  sys:
+    level: debug

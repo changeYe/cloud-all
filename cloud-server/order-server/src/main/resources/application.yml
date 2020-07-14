@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: order-server
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+
+server:
+  port: 8083
+
+
+
+#feign:
+#  client:
+#    connectTimeout: 100000
+#    readTimeout: 100000
+#  hystrix:
+#    enabled: true
+#在Feign中开启Hystrix
+logging:
+  console:
+    level: debug
+
+  sys:
+    level: debug

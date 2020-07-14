@@ -1,0 +1,39 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: cloud-nacos
+
+
+  profiles:
+    active: dev
+
+  cloud:
+    nacos:
+      config:
+        serverAddr: offline-nacos.ikunchi.com:80
+
+        file-extension: yaml
+        shared-configs[0]:
+          data-id: haha-${spring.profiles.active}.yml
+          group: DEFAULT_GROUP
+          refresh: true
+
+#spring.cloud.nacos.config.shared-configs[1].data-id=hello-${spring.profiles.active}.yml
+#spring.cloud.nacos.config.shared-configs[1].group=DEFAULT_GROUP
+#spring.cloud.nacos.config.shared-configs[1].refresh=true
+#
+#spring.cloud.nacos.config.shared-configs[2].data-id=example-${spring.profiles.active}.yml
+#spring.cloud.nacos.config.shared-configs[2].group=DEFAULT_GROUP
+#spring.cloud.nacos.config.shared-configs[2].refresh=true
+
+
+#spring.cloud.nacos.config.ext-config[0].data-id=share-consul-public.yml
+#spring.cloud.nacos.config.ext-config[0].group=DEFAULT_GROUP
+#spring.cloud.nacos.config.ext-config[0].refresh=true
+#
+#spring.cloud.nacos.config.ext-config[1].data-id=hello-public.yml
+#spring.cloud.nacos.config.ext-config[1].group=DEFAULT_GROUP
+#
+#spring.cloud.nacos.config.ext-config[2].data-id=example-public.yml
+#spring.cloud.nacos.config.ext-config[2].group=DEFAULT_GROUP
